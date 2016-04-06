@@ -1,0 +1,4 @@
+sudo: require 
+services: 
+    - docker 
+script: docker build -t andmos/git .
