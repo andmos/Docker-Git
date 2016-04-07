@@ -1,9 +1,9 @@
 Docker-git
 ===
-Super-duper-simple way to clone a git-repo for use as data container.
+Super-duper-simple way to use git to fetch stuff for use in a data container.
 
         docker build -t andmos/git .
-        docker run --name coffee -e repo=https://github.com/andmos/coffee.git -t andmos/git
+        docker run --name coffee -t andmos/git clone https://github.com/andmos/coffee.git
         docker run --volumes-from=coffee -it debian /bin/ls /var/workspace/coffee
 
 
